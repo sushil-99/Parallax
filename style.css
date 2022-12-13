@@ -1,13 +1,23 @@
+html{
+    scroll-behavior: smooth;
+}
 
-body{
+
+body {
     margin: 0;
 }
 
-.video{
+.video {
     position: relative;
 }
 
-.video > div{
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video>div {
     position: absolute;
     top: 200px;
     font-size: 3rem;
@@ -18,44 +28,126 @@ body{
     border-radius: 10px;
 }
 
-.para{
+.go-down{
+    bottom: 250px;
+    position: relative;
+    animation: down 3s infinite;
+    color: white;
+    font-size: 50px;
+    top: 250px;
+    transform: rotate(90deg);
+   
+}
+
+@keyframes down{
+    0%{
+        position: relative;
+        top: 150px;
+       
+    }
+
+    100%{
+        top: 320px;
+        opacity: 0.3;
+    }
+   
+}
+
+.main-container {
+    background-color: purple;
+    position: sticky;
+    top: 0px;
+    
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.container ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.container ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container ul li {
+    margin-left: 16px;
+}
+
+
+.btn{
+    height: 60px;
+    width:60px;
+    border-radius: 30px;
+    background: brown;
+    color:white;
+    float: right;
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.btn a{
+    color: white;
+}
+
+.para {
     background: rgb(52, 50, 50);
     color: rgb(251, 232, 232);
     padding: 2rem;
 }
 
-.img1, .img2, .img3, .img4{
+.img1,
+.img2,
+.img3,
+.img4 {
     min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.img1{
+.img1 {
     background: url(images/pic1.avif) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.img2{
+.img2 {
     background: url(images/pic2.avif) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.img3{
+.img3 {
     background: url(images/pic3.avif) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.img4{
+.img4 {
     background: url(images/pic4.avif) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.title{
+.title {
     background: rgba(0, 0, 0, 0.784);
     color: rgb(160, 170, 14);
     font-size: 3rem;
